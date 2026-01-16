@@ -1,0 +1,12 @@
+{
+    "liveServer.settings.port": 5501,
+    "javascript.suggest.autoImports": false,
+    "javascript.suggest.names": false,
+    "javascript.suggest.completeJSDocs": false,
+    "editor.wordBasedSuggestions": "off",
+    "editor.quickSuggestions": {
+        "other": false,
+        "comments": false,
+        "strings": false
+    }
+}
