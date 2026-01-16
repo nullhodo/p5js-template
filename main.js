@@ -16,18 +16,101 @@ const CONFIG = {
 
 // グローバル変数
 let W, H;
-
-const palettes = [
-    { title: "Retro Sunny Living", comment: "レトロで温かみのある暖色", colors: [{ hex: "#A6171C" }, { hex: "#D6D0C5" }, { hex: "#F1C045" }] },
-    { title: "Citrus Breeze", comment: "爽やかな青と柑橘系の黄色", colors: [{ hex: "#20373B" }, { hex: "#FFC64F" }] }, // Picked highest contrast pair
-    { title: "Dreamy Sunset", comment: "淡いパステルカラー", colors: [{ hex: "#11476C" }, { hex: "#FAD6A5" }] },
-    { title: "Bold Modernism", comment: "モダンなビビッドピンクと無彩色", colors: [{ hex: "#36434A" }, { hex: "#FF4777" }] },
-    { title: "Fresh Orange", comment: "明るいオレンジとフレッシュな水色", colors: [{ hex: "#FFA43A" }, { hex: "#A3DFF1" }] },
-    { title: "Classic Marine", comment: "クラシックなトリコロール", colors: [{ hex: "#141A45" }, { hex: "#ECE1D5" }] },
-    { title: "Retro Sci-Fi", comment: "ポップな赤と緑の補色対比", colors: [{ hex: "#2E5C58" }, { hex: "#94EEE3" }] },
-    { title: "Bauhaus Geometry", comment: "幾何学的な原色構成", colors: [{ hex: "#1E459F" }, { hex: "#FABD32" }] },
-    { title: "Dynamic Sport", comment: "アクティブでスポーティーなマルチカラー", colors: [{ hex: "#2267B1" }, { hex: "#F7D232" }] },
-    { title: "Fruit Salad", comment: "鮮やかな青と黄色のコントラスト", colors: [{ hex: "#292E4F" }, { hex: "#F3D959" }] }
+const PALETTES = [
+    {
+        title: "Retro Sunny Living",
+        comment: "レトロで温かみのある暖色",
+        colors: [
+            { name: "RUBY", hex: "#A6171C" },
+            { name: "NATURAL", hex: "#D6D0C5" },
+            { name: "SUNNY", hex: "#F1C045" }
+        ]
+    },
+    {
+        title: "Citrus Breeze",
+        comment: "爽やかな青と柑橘系の黄色",
+        colors: [{ hex: "#20373B" }, { hex: "#FFC64F" }]
+    },
+    {
+        title: "Citrus Breeze",
+        comment: "爽やかな青と柑橘系の黄色",
+        colors: [
+            { name: "LIGHT BLUE", hex: "#C3E7F1" },
+            { name: "MOONSTONE", hex: "#519CAB" },
+            { name: "SAFFRON", hex: "#FFC64F" },
+            { name: "GUNMETAL", hex: "#20373B" }
+        ]
+    },
+    {
+        title: "Dreamy Sunset",
+        comment: "淡いパステルカラーのグラデーション",
+        colors: [
+            { name: "Peach", hex: "#FAD6A5" },
+            { name: "Pink", hex: "#F593C4" },
+            { name: "Lavender", hex: "#B8AEE3" },
+            { name: "Sky Blue", hex: "#77CAE3" },
+            { name: "Dark Blue", hex: "#11476C" }
+        ]
+    },
+    {
+        title: "Bold Modernism",
+        comment: "モダンなビビッドピンクと無彩色",
+        colors: [
+            { name: "Magenta", hex: "#FF4777" },
+            { name: "Slate", hex: "#36434A" },
+            { name: "Camouflage Sand", hex: "#E5D4C8" }
+        ]
+    },
+    {
+        title: "Fresh Orange",
+        comment: "明るいオレンジとフレッシュな水色",
+        colors: [
+            { name: "Mistral", hex: "#A3DFF1" },
+            { name: "Zéphir", hex: "#FEE4B8" },
+            { name: "Solara", hex: "#FFC065" },
+            { name: "Pulpe", hex: "#FFA43A" }
+        ]
+    },
+    {
+        title: "Classic Marine",
+        comment: "クラシックなトリコロール",
+        colors: [
+            { name: "Deep Red", hex: "#7C170D" },
+            { name: "Navy Blue", hex: "#141A45" },
+            { name: "Off White", hex: "#ECE1D5" }
+        ]
+    },
+    {
+        title: "Bauhaus Geometry",
+        comment: "幾何学的な原色構成",
+        colors: [
+            { name: "Blue", hex: "#1E459F" },
+            { name: "Red", hex: "#CF2A2A" },
+            { name: "Yellow", hex: "#FABD32" },
+            { name: "Beige", hex: "#E1DCCA" }
+        ]
+    },
+    {
+        title: "Dynamic Sport",
+        comment: "アクティブでスポーティーなマルチカラー",
+        colors: [
+            { name: "BLUE", hex: "#2267B1" },
+            { name: "GOLD", hex: "#F7D232" },
+            { name: "ORANGE", hex: "#F36F36" },
+            { name: "GREEN", hex: "#5DC3AB" }
+        ]
+    },
+    {
+        title: "Fruit Salad",
+        comment: "鮮やかな青と黄色のコントラスト",
+        colors: [
+            { name: "Periwinkle", hex: "#9EB6F8" },
+            { name: "Royal Blue", hex: "#386CD4" },
+            { name: "Midnight", hex: "#292E4F" },
+            { name: "Mustard", hex: "#E2AD3E" },
+            { name: "Lemon", hex: "#F3D959" }
+        ]
+    }
 ];
 
 // --- 2. P5.JS ---
