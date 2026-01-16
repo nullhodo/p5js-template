@@ -17,6 +17,19 @@ const CONFIG = {
 // グローバル変数
 let W, H;
 
+const palettes = [
+    { title: "Retro Sunny Living", comment: "レトロで温かみのある暖色", colors: [{ hex: "#A6171C" }, { hex: "#D6D0C5" }, { hex: "#F1C045" }] },
+    { title: "Citrus Breeze", comment: "爽やかな青と柑橘系の黄色", colors: [{ hex: "#20373B" }, { hex: "#FFC64F" }] }, // Picked highest contrast pair
+    { title: "Dreamy Sunset", comment: "淡いパステルカラー", colors: [{ hex: "#11476C" }, { hex: "#FAD6A5" }] },
+    { title: "Bold Modernism", comment: "モダンなビビッドピンクと無彩色", colors: [{ hex: "#36434A" }, { hex: "#FF4777" }] },
+    { title: "Fresh Orange", comment: "明るいオレンジとフレッシュな水色", colors: [{ hex: "#FFA43A" }, { hex: "#A3DFF1" }] },
+    { title: "Classic Marine", comment: "クラシックなトリコロール", colors: [{ hex: "#141A45" }, { hex: "#ECE1D5" }] },
+    { title: "Retro Sci-Fi", comment: "ポップな赤と緑の補色対比", colors: [{ hex: "#2E5C58" }, { hex: "#94EEE3" }] },
+    { title: "Bauhaus Geometry", comment: "幾何学的な原色構成", colors: [{ hex: "#1E459F" }, { hex: "#FABD32" }] },
+    { title: "Dynamic Sport", comment: "アクティブでスポーティーなマルチカラー", colors: [{ hex: "#2267B1" }, { hex: "#F7D232" }] },
+    { title: "Fruit Salad", comment: "鮮やかな青と黄色のコントラスト", colors: [{ hex: "#292E4F" }, { hex: "#F3D959" }] }
+];
+
 // --- 2. P5.JS ---
 
 function setup() {
